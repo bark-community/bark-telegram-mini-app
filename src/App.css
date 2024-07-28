@@ -1,0 +1,105 @@
+:root {
+  --max-width: 1280px;
+  --padding-large: 2rem;
+  --padding-medium: 1.5rem;
+  --padding-small: 1rem;
+  --logo-height: 6em;
+  --transition-duration: 300ms;
+  --shadow-color-default: rgba(255, 224, 100, 0.67);
+  --shadow-color-react: rgba(251, 218, 97, 0.67);
+  --spin-duration: 20s;
+  --text-color: #666;
+  --heading-color: #333;
+  --background-color: #f9f9f9;
+  --border-radius: 8px;
+  --card-shadow: rgba(0, 0, 0, 0.1);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--padding-large);
+  text-align: center;
+}
+
+.logo {
+  height: var(--logo-height);
+  padding: var(--padding-medium);
+  will-change: filter;
+  transition: filter var(--transition-duration);
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em var(--shadow-color-default));
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em var(--shadow-color-react));
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite var(--spin-duration) linear;
+  }
+}
+
+.card {
+  padding: var(--padding-large);
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 6px var(--card-shadow);
+  margin-bottom: var(--padding-medium);
+  transition: transform var(--transition-duration), box-shadow var(--transition-duration);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px var(--card-shadow);
+}
+
+.read-the-docs {
+  color: var(--text-color);
+  font-size: 0.9rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading-color);
+  margin: 0 0 var(--padding-small) 0;
+}
+
+p {
+  margin: 0 0 var(--padding-small) 0;
+}
+
+@media (max-width: 768px) {
+  #root {
+    padding: var(--padding-small);
+  }
+  .card {
+    padding: var(--padding-medium);
+  }
+  .logo {
+    height: 5em;
+  }
+  .read-the-docs {
+    font-size: 0.8rem;
+  }
+}

@@ -1,0 +1,15 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.trophy = exports.rocket = exports.bark = exports.highVoltage = exports.coin = exports.bulldog = void 0;
+const bulldog_png_1 = require("./bulldog.png");
+exports.bulldog = bulldog_png_1.default;
+const coin_png_1 = require("./coin.png");
+exports.coin = coin_png_1.default;
+const high_voltage_png_1 = require("./high-voltage.png");
+exports.highVoltage = high_voltage_png_1.default;
+const bark_png_1 = require("./bark.png");
+exports.bark = bark_png_1.default;
+const rocket_png_1 = require("./rocket.png");
+exports.rocket = rocket_png_1.default;
+const trophy_png_1 = require("./trophy.png");
+exports.trophy = trophy_png_1.default;
